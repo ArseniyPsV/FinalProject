@@ -1,6 +1,5 @@
 /**
  * Отрисовывает задачи в списке задач.
- * @function renderTasks
  */
  function renderTasks() {
     const taskList = document.getElementById('taskList');
@@ -28,7 +27,6 @@
 
 /**
  * Инициализирует работу со списком задач.
- * @function initTaskList
  */
 function initTaskList() {
     renderTasks();
