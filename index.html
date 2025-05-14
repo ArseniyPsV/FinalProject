@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div id="weather-info" class="temperature">
+                <i class="fas fa-thermometer-half"></i> Температура в Минске: Загрузка...
+            </div>
+            <div class="exchange-rate">
+                <i class="fas fa-dollar-sign"></i> Курс доллара к белорусскому рублю: Загрузка...
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1><i class="fas fa-tasks"></i> Список дел</h1>
+        <button id="addTaskBtn">Добавить задачу</button>
+        <div id="taskForm" class="hidden">
+            <h2>Добавить/Редактировать задачу</h2>
+            <form id="taskForm">
+                <label for="title">Название:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Описание:</label>
+                <textarea id="description" name="description"></textarea>
+                <label for="deadline">Дедлайн:</label>
+                <input type="date" id="deadline" name="deadline" required>
+                <label for="tags">Теги:</label>
+                <input type="text" id="tags" name="tags" required>
+                <label for="status">Статус:</label>
+                <select id="status" name="status">
+                    <option value="pending">В процессе</option>
+                    <option value="completed">Завершено</option>
+                </select>
+                <button type="submit">Сохранить</button>
+                <button type="button" id="cancelBtn">Отмена</button>
+            </form>
+        </div>
+        <div id="taskList"></div>
+    </div>
+    <script src="weather.js"></script>
+    <script src="exchange.js"></script>
+    <script src="taskUtils.js"></script>
+    <script src="taskForm.js"></script>
+    <script src="taskList.js"></script>
+    <script src="taskActions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
