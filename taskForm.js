@@ -1,6 +1,5 @@
 /**
  * Инициализирует работу с формой задачи.
- * @function initTaskForm
  */
  function initTaskForm() {
     const taskForm = document.getElementById('taskForm');
