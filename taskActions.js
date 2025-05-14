@@ -1,6 +1,5 @@
 /**
  * Редактирует задачу с заданным ID.
- * @function editTask
  * @param {string} id - ID задачи для редактирования.
  */
  function editTask(id) {
@@ -35,7 +34,6 @@
 
 /**
  * Удаляет задачу с заданным ID.
- * @function deleteTask
  * @param {string} id - ID задачи для удаления.
  */
 function deleteTask(id) {
@@ -48,7 +46,6 @@ function deleteTask(id) {
 
 /**
  * Инициализирует обработчики событий для кнопок редактирования и удаления задач.
- * @function initTaskActions
  */
 function initTaskActions() {
     const taskList = document.getElementById('taskList');
