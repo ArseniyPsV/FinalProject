@@ -1,6 +1,5 @@
 /**
  * Обновляет информацию о курсе доллара к белорусскому рублю.
- * @function updateExchangeRate
  */
  function updateExchangeRate() {
     const currencyCode = 'USD';
@@ -19,10 +18,7 @@
                 const rate = data.Cur_OfficialRate.toFixed(2);
                 document.querySelector(".exchange-rate").innerHTML = `<i class="fas fa-dollar-sign"></i> Курс доллара: 1 USD = ${rate} BYN`;
             })
-            .catch(error => {
-                console.error('Ошибка:', error);
-                document.querySelector(".exchange-rate").innerHTML = `<i class="fas fa-dollar-sign"></i> Ошибка при получении данных о курсе валют`;
-            });
+
     } catch (error) {
         console.error('Ошибка:', error);
         document.querySelector(".exchange-rate").innerHTML = `<i class="fas fa-dollar-sign"></i> Ошибка при получении данных о курсе валют`;
