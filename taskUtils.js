@@ -1,7 +1,6 @@
 /**
  * Загружает задачи из localStorage или инициализирует пустой массив.
- * @function loadTasks
- * @returns {Array} Массив задач.
+ * @returns {Array} 
  */
  function loadTasks() {
     return JSON.parse(localStorage.getItem('tasks')) || [];
@@ -9,8 +8,7 @@
 
 /**
  * Сохраняет задачи в localStorage.
- * @function saveTasks
- * @param {Array} tasks - Массив задач для сохранения.
+ * @param {Array} tasks
  */
 function saveTasks(tasks) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -18,12 +16,6 @@ function saveTasks(tasks) {
 
 /**
  * Создает новый объект задачи.
- * @function createTask
- * @param {string} title 
- * @param {string} description 
- * @param {string} deadline 
- * @param {Array} tags 
- * @param {string} status 
  * @returns {Object} 
  */
 function createTask(title, description, deadline, tags, status) {
@@ -42,11 +34,7 @@ function createTask(title, description, deadline, tags, status) {
 
 /**
  * Валидирует поля ввода задачи.
- * @function validateTask
- * @param {string} title 
- * @param {string} deadline 
- * @param {Array} tags 
- * @returns {boolean} 
+ * @returns {boolean}
  */
 function validateTask(title, deadline, tags) {
     return !(!title || !deadline || tags.length === 0);
